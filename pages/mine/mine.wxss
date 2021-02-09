@@ -1,0 +1,58 @@
+.box .userInfo {
+  display: flex;
+  border: solid 1px grey;
+}
+
+.box .userInfo .head {
+  margin-top: 10rpx;
+  height: 120rpx;
+  width: 120rpx;
+  margin-left: 20rpx;
+  border: solid 1px grey;
+  color:#d35400 ;
+}
+
+
+.box .userInfo .sign_box {
+  width: 550rpx;
+  height: 180rpx;
+}
+
+.box .userInfo .sign_box .score {
+  margin-top: 10rpx;
+  width: 550rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+  font-size: 50rpx;
+  color: #d35400;
+}
+
+.box .userInfo .sign_box .sign_action {
+  width: 350rpx;
+  height: 80rpx;
+  font-size: 50rpx;
+  color: white;
+  line-height: 80rpx;
+  text-align: center;
+  background: #d35400;
+  margin-left: 20rpx;
+}
+
+.box .list {
+  display: flex;
+  height: 180rpx;
+  width: 100%;
+}
+
+.box .list .like {
+  height: 160rpx;
+  width: 180rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  color: #d35400;
+}
+
+.box .list .like image {
+  height: 80rpx;
+  width: 80rpx;
+}

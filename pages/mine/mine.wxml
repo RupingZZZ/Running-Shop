@@ -1,0 +1,39 @@
+<view class="box">
+  <view class="userInfo">
+    <view class="head">
+      <open-data type="userAvatarUrl"></open-data>
+      <open-data type="userNickName"></open-data>
+    </view>
+    <view class="sign_box">
+      <view class="score">{{score}}</view>
+      <view class="sign_action" bindtap="sign">签到</view>
+    </view>
+  </view>
+
+  <view class="list">
+    <navigator url="./collect/collect">
+      <view class="like">
+        <image src="../../images/icons/liked.png"></image>
+        <view>收藏夹</view>
+      </view>
+    </navigator>
+    <navigator url="../cart/pay/pay?flag=2">
+      <view class="like">
+        <image src="../../images/icons/toPay.png"></image>
+        <view>待付款</view>
+      </view>
+    </navigator>
+    <navigator url="./collect/collect">
+      <view class="like">
+        <image src="../../images/icons/toCollect.png"></image>
+        <view>待收货</view>
+      </view>
+    </navigator>
+    <navigator url="./collect/collect">
+      <view class="like">
+        <image src="../../images/icons/toComind.png"></image>
+        <view>待评论</view>
+      </view>
+    </navigator>
+  </view>
+</view>

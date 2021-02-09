@@ -1,0 +1,56 @@
+<!--pages/mine/cart/cart.wxml-->
+<view class="box" wx:if="{{cartList.length!==0}}">
+  <view class="cartBox" wx:for="{{cartList}}" wx:key="index">
+    <movable-area>
+      <movable-view direction="horizontal" x="{{item.x}}" out-of-bounds="true" damping="100" animation="true"
+        bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" bindchange="onChange"
+        data-touch="{{index}}">
+        <view class="main">
+          <radio checked="{{item.checked}}" bindtap="changeSelect" data-checked="{{item.goods_id}}"></radio>
+          <navigator url="../shop/searchPage/detail_product/detail_product?product_id={{item.goods_id}}">
+            <view class="img">
+              <image src="{{item.goods_small_logo}}"></image>
+            </view>
+          </navigator>
+          <view class="cartContent">
+            <view class="cartitle">{{item.goods_name}}</view>
+            <view class="price_num">
+              <text>￥{{item.goods_price}}</text>
+              <view class="numBox">
+                <view class="minus" data-minus="{{item.goods_id}}" bindtap="minusNum">-</view>
+                <view class="num" data-num="{{item.goods_id}}">{{item.num}}</view>
+                <view class="add" data-add="{{item.goods_id}}" bindtap="addNum">+</view>
+              </view>
+            </view>
+          </view>
+          <view class="delete" bindtap="delete" data-delete="{{item.goods_id}}">
+            <text space="emsp"> 删除</text>
+          </view>
+        </view>
+      </movable-view>
+    </movable-area>
+  </view>
+
+  <view class="buttom">
+    <view class="in">
+      <radio checked="{{checkAll}}" bindtap="changeCheck"></radio>
+      <text space="emsp">全选 合计：<text style="color:red;font-size:45rpx">￥{{sum}}</text></text>
+
+      <navigator url="./pay/pay?sum={{sum}}&&total={{total}}&&flag=0" wx:if="{{total>=1}}">
+        <view class="pay" style="background-color: #e67e22">
+          结算（{{total}}）
+        </view>
+      </navigator>
+      <view class="pay" style="background-color:grey" wx:else> 结算（{{total}}）</view>
+    </view>
+  </view>
+</view>
+<view class="else" wx:else>
+  <view class="cartPng">
+    <image src="../../images/icons/cart0.png"></image>
+  </view>
+  <view class="empty">购物车还是空的</view>
+  <navigator url="../shop/shop" open-type="switchTab">
+    <button type="default">随便看看</button>
+  </navigator>
+</view>

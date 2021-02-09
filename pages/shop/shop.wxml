@@ -1,0 +1,47 @@
+<!--pages/shop/shop.wxml-->
+<wxs module="m1">
+	function getChinese(strValue) {  
+    if(strValue!= null && strValue!= ""){      
+        return strValue.match(getRegExp('[\u4e00-\u9fa5]','g')).join("");  
+    }  
+    else  return "";  
+}
+function getNum(strValue) {  
+    if(strValue!= null && strValue!= ""){      
+        return strValue.match(getRegExp('[\d]','g')).join("");  
+    }  
+    else  return "";  
+}
+module.exports.getChinese = getChinese;
+module.exports.getNum = getNum;
+</wxs>
+
+<view>
+<search></search>
+	<view class="switchBox">
+		<swiper autoplay indicator-dots>
+			<view wx:for="{{switchList}}" wx:key="*this" class="switchList">
+				<swiper-item>
+					<navigator 	url="../../pages/shop/searchPage/searchPage?search_item={{m1.getNum(item.navigator_url)}}">
+						<image src="{{item.image_src}}" mode="widthFix"></image>
+					</navigator>
+				</swiper-item>
+			</view>
+		</swiper>
+	</view>
+	<view class="casteList">
+		<navigator wx:for="{{catesList}}" wx:key="name">
+			<image mode="widthFix" src="{{item.image_src}}"></image>
+		</navigator>
+	</view>
+	<view class="floor" wx:for="{{floorList}}" wx:key="floor_title">
+		<image mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+		<view class="product_list">
+			<navigator  wx:for="{{item.product_list}}" wx:for-index="index1" wx:key="name"
+			url="../../pages/shop/searchPage/searchPage?search_item={{m1.getChinese(item.navigator_url)}}"
+			>
+				<image src="{{item.image_src}}" mode="{{index1===0?'widthFix':'scaleToFill'}}"></image>
+			</navigator>
+		</view>
+	</view>
+</view>

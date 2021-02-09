@@ -1,0 +1,76 @@
+.weather {
+  height: 360rpx;
+  width: 100%;
+  color: white;
+  position: absolute;
+}
+
+.back {
+  background-image: url(http://pic.616pic.com/ys_bnew_img/00/05/12/Z29pBhWfo1.jpg);
+  height: 360rpx;
+  width: 100%;  
+  z-index: -1;
+}
+
+.weather .wea_icon {
+  height: 100%;
+  width: 30%;
+  float: left;
+}
+
+.weather .wea_icon image {
+  width: 100%;
+  height: 65%;
+}
+
+.weather .wea_content {
+  padding-top: 20px;
+  padding-left: 35rpx;
+  height: 100%;
+  position: relative;
+}
+
+.weather .wea_content .temple {
+  height: 86rpx;
+}
+
+.weather .wea_content .temple .num {
+  display: inline-block;
+  font-size: 86rpx;
+  color: #fff;
+  height: 86rpx;
+  line-height: 86rpx;
+}
+
+.weather .wea_content .temple .airContent {
+  position: absolute;
+  left: 450rpx;
+  top: 86rpx;
+}
+
+.weather .wea_content .temple .airContent image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 5rpx;
+}
+
+.weather .wea_content .cloud {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.weather .wea_content .cloud image {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+
+.weather .wea_content .word image {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+
+.lodding {
+  text-align: center;
+}

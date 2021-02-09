@@ -1,0 +1,15 @@
+<!--pages/index/scoreCompent/scoreCompent.wxml-->
+<view class="scoreContent">
+  <view class="display" wx:for="{{list}}" wx:key="id">
+    <view class="box">
+      <text space="emsp">\n{{item.title}}\n{{item.num}}</text>
+    </view>
+  </view>
+  <view class="contentList">
+    <view class="list" wx:for="{{eventList}}" wx:key="id" bindtap="ChangeDisplay" data-id="{{item.id}}">
+      <image src="{{item.id==idx?'../../images/system/selected.png':'../../images/system/quant.png'}}"></image>
+      <view class="{{item.id==idx?'title_selected':'title'}}">{{item.title}}</view>
+    </view>   
+  </view>
+
+</view>

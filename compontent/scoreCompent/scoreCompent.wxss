@@ -1,0 +1,49 @@
+.scoreContent {
+  height: 300rpx;
+  width: 100%;
+}
+.scoreContent .display {
+  float: left;
+  width: 35%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.scoreContent .display .box {
+  color: white;
+  margin-top: 40rpx;
+  margin-left: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  /*颜色渐变效果*/
+  background: radial-gradient(circle at 70px 70px, #2ecc71, #3498db);
+}
+.scoreContent .contentList {
+  float: left;
+  width: 65%;
+  height: 100%;
+}
+.scoreContent .contentList .list {
+  width: 50%;
+  margin-top: 40rpx;
+  display: inline-block;
+  height: 80rpx;
+}
+.scoreContent .contentList .list image {
+  width: 55rpx;
+  height: 55rpx;
+  float: left;
+}
+.scoreContent .contentList .list .title {
+  float: left;
+  height: 80rpx;
+  line-height: 60rpx;
+}
+.scoreContent .contentList .list .title_selected {
+  float: left;
+  height: 80rpx;
+  line-height: 60rpx;
+  color: indianred;
+  font-size: 20px;
+}

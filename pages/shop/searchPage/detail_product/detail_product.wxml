@@ -1,0 +1,44 @@
+<!--pages/shop/searchPage/detail_product/detail_product.wxml-->
+<view>
+	<view class="switchBox">
+		<swiper autoplay indicator-dots>
+			<view wx:for="{{pic}}" wx:key="*this" class="switchList">
+				<swiper-item>
+					<image src="{{item.pics_big}}" mode="widthFix"></image>
+				</swiper-item>
+			</view>
+		</swiper>
+	</view>
+	<view class="main">
+		<view class="price">
+			<text space="emsp">￥{{product.goods_price}} </text>
+			<text>1500积分</text>
+		</view>
+		<view class="content">
+			<view class="title">{{product.goods_name}}</view>
+			<view class="like">
+				<image src="{{isClick?'../../../../images/icons/liked.png':'../../../../images/icons/like.png'}}"
+					bindtap="changeType"></image>
+				<view style="font-size:24rpx">{{isClick?'已收藏':'收藏'}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="buttom">
+		<view class="in">
+			<view class="advicer">
+				<image src="../../../../images/icons/advicer.png"></image>
+				<text>客服</text>
+			</view>
+			<view class="cart">
+				<navigator url="../../../cart/cart" open-type="switchTab">
+					<image src="../../../../images/icons/cart1.png"></image>
+					<text>购物车</text>
+				</navigator>
+			</view>
+			<view class="{{isCart?'joined':'join'}}" bindtap="getJoin">{{isCart?'取消购物车':'加入购物车'}}</view>
+			<navigator url="../../../cart/pay/pay?flag=1&&total=1&&sum={{product.goods_price}}&&size={{size}}" bindtap="setProduct">
+				<view class="buy">立即购买</view>
+			</navigator>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,79 @@
+.search {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: #2ecc71;
+}
+
+.search textarea {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+  display: flex;
+  background-color: white;
+  border-radius: 15rpx;
+  color: #666;
+}
+
+.search .navbar {
+  width: 690rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  margin: 0 auto;
+}
+
+.search .navbar .navbar-item {
+  width: 50%;
+  float: left;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.search .navbar .navbar-item.active {
+  border-bottom-color: #b8574c;
+  color: #a8372b;
+}
+
+.search .Box .searchBox {
+  height: 220rpx;
+  width: 100%;
+  margin: 10rpx 0 10rpx 0;  
+  border: solid #eee thin;
+}
+
+.search .Box .searchBox navigator .searchPic {
+  height: 220rpx;
+  width: 240rpx;
+  background-color: blanchedalmond;
+  float: left;
+}
+
+.search .Box .searchBox navigator .searchTitle {
+  height: 50rpx;
+  width: 490rpx;
+  float: left;
+  background-color: hotpink;
+}
+
+.search .Box .searchBox navigator .searchContent {
+  height: 130rpx;
+  width: 480rpx;
+  font-size: 25rpx;
+  padding: 0 0 0 10rpx;
+  float: left;
+  background-color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+
+.search .Box .searchBox navigator .searchPrice {
+  height: 40rpx;
+  width: 490rpx;
+  float: left;
+  background-color: green;
+  color: red;
+
+}

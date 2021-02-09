@@ -1,0 +1,36 @@
+<!--pages/index/weatherCompent/weatherCompent.wxml-->
+
+<view class="lodding" wx:if="{{now.length === 0}}">
+  <image src="../../images/system/lodding.png"></image>
+</view >
+<view class="back" wx:else>
+<view class="weather" style="{{time<18?'':'background-color: rgba(0,0,0,0.8)'}}">
+  <view class="wea_icon">
+    <image src="../../images/256/{{now.icon}}.png">
+  </image>
+</view>
+<view class="wea_content">
+  <view class="temple">
+    <view class="num">{{now.temp}}°</view>
+    <text space="emsp">{{now.text}}</text>
+    <view class="airContent">
+      <image src="../../images/weather/middle.png" wx:if="{{air.category==='良'}}"></image>
+      <image src="../../images/weather/good.png" wx:if="{{air.category==='优'}}"></image>
+      <image src="../../images/weather/bad.png" wx:if="{{air.category==='轻度污染'}}"></image>
+      <text space="emsp">{{air.aqi}} {{air.category}}</text>
+    </view>
+  </view>
+  <view class="cloud">
+    <image src="../../images/weather/windposition.png" />
+    <text space="emsp">{{now.windDir}}：{{now.windScale}} </text>
+    <image src="../../images/weather/humidity.png"></image>
+    <text>湿度：{{now.humidity}}%</text>
+  </view>
+  <view class="word">
+    <image src="../../images/weather/postion.png"></image>
+    <text space="emsp">城市：{{local.adm2}} {{local.name}}  </text>
+    <image src="{{time>=18?'../../images/weather/star.png':''}}"></image>
+  </view>
+</view>
+</view>
+</view>

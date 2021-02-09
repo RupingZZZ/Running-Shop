@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/shop/searchPage/searchPage",
+    "pages/shop/searchPage/detail_product/detail_product",
+    "pages/cart/pay/pay",
+    "pages/mine/collect/collect"
+
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于功能定位"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2ecc71",
+    "navigationBarTitleText": "运动商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/index1.png",
+        "selectedIconPath": "images/icons/index.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "images/icons/shop1.png",
+        "selectedIconPath": "images/icons/shop.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/icons/cart0.png",
+        "selectedIconPath": "images/icons/cart.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/icons/mine1.png",
+        "selectedIconPath": "images/icons/mine.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

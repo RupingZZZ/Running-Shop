@@ -1,0 +1,6 @@
+<!--pages/shop/searchCompent/searchCompent.wxml-->
+<view class="search">
+	<navigator url="../../pages/shop/searchPage/searchPage?">
+		搜索
+	</navigator>
+</view>

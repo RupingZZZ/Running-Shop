@@ -1,0 +1,157 @@
+.box .cartBox {
+  display: flex;
+  overflow: hidden;
+}
+
+.box .cartBox movable-area {
+  width: 750rpx;
+  height: 240rpx;
+}
+
+.box .cartBox movable-area movable-view {
+  width: 950rpx;
+  height: 240rpx;
+}
+
+.box .cartBox .main {
+  width: 750rpx;
+  height: 240rpx;
+  display: inline-flex;
+  margin-left: 15rpx;
+
+}
+
+.box .cartBox .main .delete {
+  background-color: red;
+  height: 220rpx;
+  line-height: 220rpx;
+  width: 200rpx;
+  padding-left: 15rpx;
+  flex-shrink: 0;
+}
+
+.box .cartBox .main .delete text {
+  color: white;
+  font-size: 40rpx;
+}
+
+.box .cartBox .main radio {
+  position: relative;
+  top: 40%;
+}
+
+.box .cartBox .main .img {
+  height: 80%;
+  width: 196rpx;
+  border: 1px solid grey;
+  margin-top: 24rpx;
+}
+
+.box .cartBox .main .img image {
+  height: 80%;
+  width: 196rpx;
+}
+
+.box .cartBox .main .cartContent {
+  margin-top: 24rpx;
+  width: 500rpx;
+  height: 80%;
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.box .cartBox .main .cartContent .cartitle {
+  color: grey;
+  font-size: 24rpx;
+  height: 140rpx;
+  width: 420rpx;
+}
+
+.box .cartBox .main .cartContent .price_num {
+  width: 100%;
+  height: 56rpx;
+  display: inline-flex;
+}
+
+.box .cartBox .main .cartContent .price_num .numBox {
+  height: 56rpx;
+  width: 30%;
+  display: inline-flex;
+  position: absolute;
+  left: 60%;
+}
+
+.box .cartBox .main .cartContent .price_num .numBox .add {
+  border: 1px solid grey;
+  width: 50rpx;
+  text-align: center;
+}
+
+.box .cartBox .main .cartContent .price_num .numBox .num {
+  border: 1px solid grey;
+  width: 50rpx;
+  text-align: center;
+}
+
+.box .cartBox .main .cartContent .price_num .numBox .minus {
+  border: 1px solid grey;
+  width: 50rpx;
+  text-align: center;
+}
+
+
+.buttom {
+  border-top: solid #eee thin;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  font-size: 24rpx;
+}
+
+.buttom .in {
+  border-bottom: solid #eee thin;
+  width: 95%;
+  height: 80rpx;
+  display: flex;
+  line-height: 80rpx;
+  padding-left: 5%;
+}
+
+.buttom .in .pay {
+  height: 80rpx;
+  width: 25%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+}
+
+.else .cartPng {
+  margin-top: 160rpx;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.else .cartPng image {
+  height: 100rpx;
+  width: 100rpx;
+}
+.else .empty{
+  margin-top: 30rpx;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: grey;
+}
+.else button{
+  margin-top: 30rpx;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: grey;
+}

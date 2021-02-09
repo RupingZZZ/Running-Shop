@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Weather":"../../compontent/weatherCompent/weatherCompent",
+    "Score":"../../compontent/scoreCompent/scoreCompent",
+    "eCharts":"../../compontent/eCharts/eCharts"
+  }
+}

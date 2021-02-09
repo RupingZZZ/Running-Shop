@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="box">
+  <Weather></Weather>
+  <view class="ground">
+    <Score></Score>   
+    <eCharts></eCharts>
+  </view>
+</view>

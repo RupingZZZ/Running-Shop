@@ -1,0 +1,20 @@
+<!--pages/shop/searchPage/searchPage.wxml-->
+<view class="search">
+  <textarea name="search" id="search" value="请输入商品名称" confirm-type="search" bindconfirm="getSearch"
+    bindblur="getSearch">
+ </textarea>
+  <view class="navbar">
+    <view class="{{'navbar-item '+ (type==1?'active':'')}}" bindtap="changeType" data-type="1">热卖商品</view>
+    <view class="{{'navbar-item '+ (type==2?'active':'')}}" bindtap="changeType" data-type="2">积分商品</view>
+  </view>
+  <view class="Box">
+    <view class="searchBox" wx:for="{{goods}}" wx:key="id">
+      <navigator url="./detail_product/detail_product?product_id={{item.goods_id}}">      
+          <view class="searchPic">PIC</view>
+        <view class="searchTitle"></view>
+        <view class="searchContent">{{item.goods_name}}</view>
+        <view class="searchPrice">{{item.goods_price}}</view>    
+      </navigator>
+    </view>
+  </view>
+</view>

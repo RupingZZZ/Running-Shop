@@ -1,0 +1,4 @@
+<view class="qiun-charts" wx:if="{{runList.length!==0}}">
+  <canvas canvas-id="canvasLineA" id="canvasLineA" class="charts" bindtouchstart="touchLineA" bindtouchmove="moveLineA"
+    bindtouchend="touchEndLineA"></canvas>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/cart/pay/pay.wxml-->
+<view class="box" wx:if="{{products.length!==0}}">
+  <view class="address" wx:if="{{address.length===0}}">
+    <button type="primary" bindtap="getAddress">选择地址</button>
+  </view>
+  <view class="addressd" wx:else>
+    <view class="city">{{address.provinceName}}{{address.cityName}}{{address.countyName}}</view>
+    <view class="road">{{address.detailInfo}}</view>
+    <view class="name"><text space="emsp">{{address.userName}} {{address.telNumber}}</text></view>
+    <view class="img">
+      <image src="../../../images/icons/address.png"></image>
+    </view>
+    <view class="alter" bindtap="getAddress">修改地址</view>
+  </view>
+
+  <view class="products" >
+    <view class="products_item" wx:for="{{products}}" wx:key="id">
+      <view class="pic">
+        <image src="{{item.goods_small_logo}}"></image>
+      </view>
+      <view class="title">{{item.goods_name}}</view>
+      <view class="price_num">
+        <view class="price">￥{{item.goods_price}}</view>
+        <view class="num">×{{flag==0?item.num:1}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="discount"></view>
+  <view class="time"></view>
+  <view class="buttom">
+    <view class="in">
+      <text space="emsp">共{{total}}件，合计 <text
+          style="color:red;font-size:45rpx">￥{{sum}}</text></text>
+      <navigator url="../../mine/mine" open-type="switchTab" >
+      <view class="pay" style="background-color: #e67e22" bindtap="getPay">去付款</view>
+    </navigator>
+    </view>
+  </view>
+</view>
+<view class="else" wx:else>
+  <view class="cartPng">
+    <image src="../../../images/icons/pay.png"></image>
+  </view>
+  <view class="empty">付款栏还是空的</view>
+  <navigator url="../../shop/shop" open-type="switchTab">
+    <button type="default">随便看看</button>
+  </navigator>
+</view>

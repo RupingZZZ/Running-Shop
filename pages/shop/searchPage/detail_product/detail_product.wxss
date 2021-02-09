@@ -1,0 +1,131 @@
+/* pages/shop/searchPage/detail_product/detail_product.wxss */
+.switchBox swiper {
+  height: 750rpx;
+  width: 750rpx;
+}
+
+.switchBox swiper image {
+  width: 100%;
+}
+
+.casteList {
+  display: flex;
+}
+
+.casteList image {
+  width: 100%;
+}
+
+.main .price {
+  font-size: 45rpx;
+  color: red;
+  height: 80rpx;
+  width: 100%;
+}
+
+.main .content {
+  height: 140rpx;
+  border: solid #eee thin;
+  display: flex;
+  font-size: 28rpx;
+  color: gray;
+  
+
+}
+
+.main .content .title {
+  height: 100%;
+  width: 80%;
+  padding:0 15rpx 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+
+}
+
+.main .content .like {
+  height: 100%;
+  border-left: 2px solid grey;
+  width: 20%;
+  text-align: center;
+}
+
+.main .content .like image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx 0 0 5rpx;
+}
+
+.buttom {
+  border-top: solid #eee thin;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  font-size: 24rpx;
+}
+
+.buttom .in {
+  border-bottom: solid #eee thin;
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+}
+
+.buttom .in .advicer {
+  width: 70rpx;
+  height: 100rpx;
+  margin: 10rpx 15rpx 0 50rpx;
+}
+
+.buttom .in .advicer image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.buttom .in .cart {
+  width: 90rpx;
+  height: 100rpx;
+  margin: 10rpx 15rpx 0 50rpx;
+}
+
+.buttom .in .cart image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.buttom .in .join {
+  width: 200rpx;
+  line-height: 100rpx;
+  text-align: center;
+  height: 100rpx;
+  margin: 10rpx 30rpx 0 20rpx;
+  color: white;
+  border-radius: 25px;
+  background-color: tomato;
+}
+.buttom .in .joined {
+  width: 200rpx;
+  line-height: 100rpx;
+  text-align: center;
+  height: 100rpx;
+  margin: 10rpx 30rpx 0 20rpx;
+  color: white;
+  border-radius: 25px;
+  background-color: #27ae60;
+}
+
+
+.buttom .in .buy {
+  width: 200rpx;
+  line-height: 100rpx;
+  text-align: center;
+  height: 100rpx;
+  margin: 10rpx 30rpx 0 20rpx;
+  color: white;
+  border-radius: 25px;
+  background-color: #f39c12;
+}

@@ -1,0 +1,40 @@
+<view class="box" wx:if="{{cartList.length!==0}}">
+  <view class="cartBox" wx:for="{{cartList}}" wx:key="index">
+    <movable-area>
+      <movable-view direction="horizontal" x="{{item.x}}" out-of-bounds="true" damping="100" animation="false"
+        bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" bindchange="onChange"
+        data-touch="{{index}}">
+        <view class="main">
+          <navigator url="../../shop/searchPage/detail_product/detail_product?product_id={{item.goods_id}}">
+            <view class="img">
+              <image src="{{item.goods_small_logo}}"></image>
+            </view>
+          </navigator>
+          <view class="cartContent">
+            <view class="cartitle">{{item.goods_name}}</view>
+            <view class="price_num">
+              <text>￥{{item.goods_price}}</text>
+            </view>         
+          </view>
+          <view class="addCart">
+            <navigator url="../../cart/cart" open-type="switchTab" bindtap="addCart" data-index="{{index}}">
+            <image src="../../../images/icons/cart0.png"></image>
+          </navigator>
+          </view>
+          <view class="delete" bindtap="delete" data-delete="{{item.goods_id}}">
+            <text space="emsp"> 删除</text>
+          </view>
+        </view>
+      </movable-view>
+    </movable-area>
+  </view>
+</view>
+<view class="else" wx:else>
+  <view class="cartPng">
+    <image src="../../../images/icons/like.png"></image>
+  </view>
+  <view class="empty">收藏夹还是空的</view>
+  <navigator url="../../shop/shop" open-type="switchTab">
+    <button type="default">随便看看</button>
+  </navigator>
+</view>
